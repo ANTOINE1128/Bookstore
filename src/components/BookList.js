@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 
-const BookList = ({ Books, title, handleDelete }) => (
+const BookList = ({ Books, title }) => (
   <div className="book-list">
     <h1>{title}</h1>
     {Books.map((book) => (
@@ -9,7 +9,7 @@ const BookList = ({ Books, title, handleDelete }) => (
         <h2>{book.title}</h2>
         <p>{book.author}</p>
         <div className="delete">
-          <button type="button" onClick={() => handleDelete(book.id)}>
+          <button type="button">
             Delete Book
           </button>
         </div>
@@ -28,7 +28,6 @@ BookList.propTypes = {
     }),
   ).isRequired,
   title: PropTypes.string.isRequired,
-  handleDelete: PropTypes.func.isRequired,
 };
 
 export default BookList;
