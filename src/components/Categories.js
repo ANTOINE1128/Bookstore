@@ -1,5 +1,7 @@
+import React from 'react';
+
 const Categories = () => (
-  <div><h1>will add soon</h1></div>
+  <h1>categories</h1>
 );
 
 export default Categories;
