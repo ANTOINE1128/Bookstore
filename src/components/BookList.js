@@ -1,13 +1,29 @@
-import React from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { remove } from '../redux/books/booksSlice';
 import Book from './Book';
 
-const BookList = () => (
+const BookList = () => {
+  const books = useSelector((state) => state.books);
+  const dispatch = useDispatch();
 
-  <ul>
-    <Book title="Get rich or die trying" author=" 50 cent" category="educating" />
-    <Book title="hunger games" author=" Maria " category="Action" />
-  </ul>
+  const handleDelete = (id) => {
+    dispatch(remove({ id }));
+  };
 
-);
+  return (
+    <ul>
+      {books.map((book) => (
+        <Book
+          key={book.id}
+          id={book.id}
+          title={book.title}
+          author={book.author}
+          category={book.category}
+          onDelete={handleDelete}
+        />
+      ))}
+    </ul>
+  );
+};
 
 export default BookList;
