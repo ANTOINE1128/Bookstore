@@ -1,3 +1,4 @@
+import React from 'react';
 import BookList from './BookList';
 import AddBook from './AddBook';
 
@@ -7,5 +8,4 @@ const RenderBooks = () => (
     <BookList />
   </>
 );
-
 export default RenderBooks;
