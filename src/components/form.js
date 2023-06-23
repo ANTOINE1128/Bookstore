@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchData, addBooks } from '../redux/books/bookSlice';
-import '../styles/general.css';
 
 const FormSection = () => {
   const [title, SetTitle] = useState('');
