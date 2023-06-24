@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Roboto+Slab:wght@300;700&display=swap');
+
+body {
+  background-color: #f5f6fa;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+
+.wholeApp {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+
+ul {
+  list-style-type: none;
+  display: flex;
+  column-gap: 10px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.progress {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  left: 50px;
+}
+
+.perDisplay {
+  border: 5px solid royalblue;
+  border-left: 5px solid rgb(170, 170, 170);
+  border-radius: 50%;
+  transform: rotate(25deg);
+  width: 70px;
+  height: 70px;
+}
+
+.percentagesData {
+  display: flex;
+  flex-direction: column;
+  margin-left: 15px;
+}

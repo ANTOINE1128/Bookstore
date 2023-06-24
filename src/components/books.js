@@ -1,6 +1,10 @@
 import React, { useEffect } from 'react';
+import '../styles/general.css';
+import '../styles/bookInstance.css';
+import '../styles/loading.css';
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchData, deleteBooks } from '../redux/books/bookSlice';
+import OtherInfoSection from './bookSupport';
 
 const Book = () => {
   const allBooks = useSelector((state) => state.books.books);
@@ -28,7 +32,7 @@ const Book = () => {
 
   if (allBooks.length === 0) {
     return (
-      <div>
+      <div className="noBooks-Message">
         <h1>No books have been added yet!</h1>
       </div>
     );
@@ -36,7 +40,14 @@ const Book = () => {
 
   if (loadingState) {
     return (
-      <div>loading...</div>
+      <section className="loadingState">
+        <div className="lds-ring">
+          <div />
+          <div />
+          <div />
+          <div />
+        </div>
+      </section>
     );
   }
 
@@ -52,6 +63,7 @@ const Book = () => {
             <button type="submit" data-index={book.item_id} onClick={() => handleButtonClick(book.item_id)}>Remove</button>
             <button type="submit">Edit</button>
           </section>
+          <OtherInfoSection book={book} />
         </div>
       ))}
     </section>
