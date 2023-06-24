@@ -67,7 +67,7 @@ const FormSection = () => {
               handleAfterClick();
             }}
           >
-            ADD BUTTON
+            ADD BOOK
           </button>
         </form>
         {emptyFields && <span>please fill in all the fields!</span>}
