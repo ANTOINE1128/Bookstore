@@ -3,7 +3,7 @@ import './App.css';
 import { Route, Routes } from 'react-router-dom';
 import Navigation from './components/navigation';
 import BooksDisplay from './components/booksDisplay';
-import Categories from './components/categories';
+import Categories from './components/Categories';
 
 function App() {
   return (

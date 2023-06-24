@@ -30,8 +30,8 @@ export const fetchData = createAsyncThunk(
   async () => {
     const appID = await GetAppId();
     const request = await axiosInstance.get(`/apps/${appID}/books`);
-    const responce = await request.data;
-    return responce;
+    const response = await request.data;
+    return response;
   },
 );
 
