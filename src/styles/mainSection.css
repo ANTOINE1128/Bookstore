@@ -36,7 +36,7 @@
 
 .booksHolder {
   width: 90%;
-  min-height: 10rem;
+  min-height: 20rem;
   display: flex;
   flex-direction: column;
   row-gap: 10px;
